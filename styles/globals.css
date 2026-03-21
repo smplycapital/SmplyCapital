@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-navy-950 text-white font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    @apply bg-gold text-navy-900;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-navy-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gold rounded-full;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gold text-navy-900 font-semibold rounded-sm hover:bg-gold-400 active:scale-95 transition-all duration-200 text-sm tracking-wide uppercase;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-gold text-gold font-semibold rounded-sm hover:bg-gold hover:text-navy-900 active:scale-95 transition-all duration-200 text-sm tracking-wide uppercase;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 text-white font-medium hover:text-gold transition-colors duration-200 text-sm tracking-wide;
+  }
+
+  .section-heading {
+    @apply font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
+  }
+
+  .section-subheading {
+    @apply text-gold font-semibold text-sm tracking-[0.2em] uppercase;
+  }
+
+  .gold-line {
+    @apply block w-16 h-0.5 bg-gold mt-4;
+  }
+
+  .card-dark {
+    @apply bg-card-gradient border border-white/5 rounded-lg p-6 hover:border-gold/30 transition-all duration-300;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .nav-link {
+    @apply text-white/80 hover:text-gold transition-colors duration-200 text-sm font-medium tracking-wide;
+  }
+
+  .input-field {
+    @apply w-full bg-navy-800 border border-white/10 text-white placeholder-white/30 px-4 py-3 rounded-sm focus:outline-none focus:border-gold/60 transition-colors duration-200 text-sm;
+  }
+
+  .stat-number {
+    @apply font-display text-4xl md:text-5xl font-bold text-gold;
+  }
+
+  .divider-gold {
+    @apply border-t border-gold/20;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(90deg, #c9a84c 0%, #e5c97a 50%, #c9a84c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+
+  .clip-diagonal {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
+
+  .clip-diagonal-reverse {
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+  }
+
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+}
