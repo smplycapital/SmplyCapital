@@ -1,0 +1,184 @@
+{
+  "documents": [
+    {
+      "id": "company-overview",
+      "category": "company",
+      "title": "Simply Capital Overview",
+      "content": "Simply Capital is a direct private lender providing fast, flexible financing for real estate investors across the nation. Founded in 2015, the company has funded over $2B in loans, closed 1,500+ deals across 30+ states, and maintains a 95% repeat client rate. Simply Capital is not a broker — it is the bank. Loan officers have authority to make decisions directly, with no committees or middlemen. The company offers bridge loans, fix-and-flip financing, construction loans, DSCR rental loans, ground-up development, and multifamily loans. Simply Capital was founded on a simple premise: real estate investors deserve a lending partner who moves at the speed of opportunity — one that speaks the language of deals."
+    },
+    {
+      "id": "company-mission",
+      "category": "company",
+      "title": "Simply Capital Mission",
+      "content": "Simply Capital's mission is making private capital simply accessible. The founders started Simply Capital because they lived the problem. As investors themselves, they knew what it felt like to have the right deal, the right timeline, and the wrong lender — bureaucratic delays, hidden fees, loan officers who didn't understand real estate. So they built the lender they wished existed — one that operates with urgency, communicates clearly, and genuinely cares whether your deal closes."
+    },
+    {
+      "id": "company-values",
+      "category": "company",
+      "title": "Simply Capital Core Values",
+      "content": "Simply Capital operates on four core values: 1) Speed Without Compromise — Every day matters in real estate. The process is built around fast decisions and faster funding without cutting corners on diligence. 2) Direct Lending — Simply Capital is the bank. No brokers, no committees, no middlemen. Your loan officer has authority to make decisions. 3) Investor-First Mindset — The team is made up of investors and former real estate operators who understand your deal because they've been in your shoes. 4) Transparent Terms — No surprises at closing. What is quoted is what you get. Term sheets reflect actual loan terms, not teaser rates."
+    },
+    {
+      "id": "company-milestones",
+      "category": "company",
+      "title": "Simply Capital History and Milestones",
+      "content": "Simply Capital's journey: 2015 — Founded with focus on bridge lending in the Southeast. 2017 — Expanded nationally, reaching 15 states and $100M in cumulative originations. 2019 — Launched DSCR and construction lending programs, surpassed $500M funded. 2021 — Secured institutional capital facility, enabling larger loan sizes up to $50M+. 2023 — Crossed $2B in total originations across 30+ states. 2024 — Expanded ground-up development lending and multifamily programs nationwide."
+    },
+    {
+      "id": "company-advantages",
+      "category": "company",
+      "title": "Why Choose Simply Capital",
+      "content": "Simply Capital's advantages include: Direct lender, not a broker. Term sheets delivered in 24 hours. Close in 5-10 business days. No income verification required. Asset-based underwriting. No prepayment penalty on most programs. Dedicated loan officer assigned to every deal. Competitive institutional pricing. Up to 90% LTV/LTC available. $2B+ funded track record. Fast approvals. Flexible underwriting for complex scenarios. No hidden fees. Nationwide lending across 30+ states."
+    },
+    {
+      "id": "team-james-thornton",
+      "category": "team",
+      "title": "James Thornton - CEO & Co-Founder",
+      "content": "James Thornton is the CEO and Co-Founder of Simply Capital. He has 15+ years in real estate finance and was formerly VP at a national private equity firm before co-founding Simply Capital."
+    },
+    {
+      "id": "team-allison-reed",
+      "category": "team",
+      "title": "Allison Reed - Chief Credit Officer",
+      "content": "Allison Reed is the Chief Credit Officer of Simply Capital. She has underwritten $1B+ in commercial and residential real estate loans and brings institutional discipline to private lending."
+    },
+    {
+      "id": "team-michael-chen",
+      "category": "team",
+      "title": "Michael Chen - Head of Capital Markets",
+      "content": "Michael Chen is the Head of Capital Markets at Simply Capital. He manages institutional funding relationships ensuring Simply Capital maintains competitive rates and ample loan capacity."
+    },
+    {
+      "id": "team-sarah-nobile",
+      "category": "team",
+      "title": "Sarah Nobile - Senior Loan Officer",
+      "content": "Sarah Nobile is a Senior Loan Officer at Simply Capital. She has 10 years structuring complex bridge and construction loans and is known for creative deal structuring on challenging transactions."
+    },
+    {
+      "id": "loan-bridge",
+      "category": "loan-program",
+      "title": "Bridge Loans",
+      "content": "Simply Capital Bridge Loans: Short-term leverage for long-term vision. Acquire, stabilize, or reposition assets fast. Bridge loans give investors the speed and flexibility needed to capitalize on time-sensitive opportunities. Key highlights: Up to 80% LTV, 12-24 month terms, close in 5-10 days, no income verification. Loan range: $250K to $25M+. Ideal for acquisitions, stabilization, or repositioning of investment properties."
+    },
+    {
+      "id": "loan-fix-flip",
+      "category": "loan-program",
+      "title": "Fix & Flip Loans",
+      "content": "Simply Capital Fix & Flip Loans: Renovation capital built for speed. From single-family to small multifamily, Simply Capital funds purchase plus renovation costs so you can focus on the project, not the paperwork. Key highlights: Up to 90% LTC (loan-to-cost), 100% rehab funded, draw schedule flexibility, experienced investors preferred. Loan range: $100K to $5M."
+    },
+    {
+      "id": "loan-construction",
+      "category": "loan-program",
+      "title": "New Construction Loans",
+      "content": "Simply Capital New Construction Loans: Ground-up confidence. Build with confidence. Construction loans cover vertical development projects with structured draw schedules and dedicated support from start to certificate of occupancy. Key highlights: Up to 85% LTC, interest reserve included, structured draws, 12-24 month terms. Loan range: $500K to $20M+."
+    },
+    {
+      "id": "loan-dscr",
+      "category": "loan-program",
+      "title": "DSCR / Rental Loans",
+      "content": "Simply Capital DSCR / Rental Loans: Qualify on the property, not the person. Designed for long-term investors building rental portfolios. DSCR loans underwrite based on property cash flow, not personal income. Key highlights: DSCR ratio of 1.0 or greater required, 30-year fixed rate available, no tax returns required, available for single properties or portfolios. Loan range: $150K to $10M."
+    },
+    {
+      "id": "loan-ground-up",
+      "category": "loan-program",
+      "title": "Ground-Up Development Loans",
+      "content": "Simply Capital Ground-Up Development Loans: Vision backed by capital. Larger-scale residential and mixed-use development projects deserve a lender who understands entitlements, phasing, and complex capital structures. Key highlights: Up to 70% LTC, horizontal and vertical development, pre-development considered, experienced sponsors required. Loan range: $1M to $50M+."
+    },
+    {
+      "id": "loan-multifamily",
+      "category": "loan-program",
+      "title": "Multifamily Loans",
+      "content": "Simply Capital Multifamily Loans: Scale your portfolio. Acquisition, value-add, or cash-out on 5+ unit properties. Simply Capital understands multifamily underwriting and moves with the urgency the market demands. Key highlights: 5+ units, value-add and stabilized properties, cash-out options available, bridge or permanent financing. Loan range: $500K to $25M+."
+    },
+    {
+      "id": "general-terms",
+      "category": "terms",
+      "title": "General Lending Terms",
+      "content": "Simply Capital general lending terms across all programs: Loan amounts from $100K to $50M+. LTV up to 90%. Terms from 6 to 36 months. Interest rates from 9.99%. Origination fees of 1-3 points. Close time of 5-10 business days. No prepayment penalty on most programs. Full recourse. All loans are for investment properties only — not owner-occupied. Credit score of 620+ preferred, but each deal is evaluated holistically. Asset-based underwriting means the property is the primary consideration."
+    },
+    {
+      "id": "process",
+      "category": "process",
+      "title": "Simply Capital Loan Process",
+      "content": "Simply Capital's 4-step loan process: Step 1 — Submit Your Scenario: Share deal details online, by phone, or email. Simply Capital responds same business day. Step 2 — Receive Term Sheet: Preliminary terms delivered within 24 hours. No obligation, no credit pull. Step 3 — Underwriting & Appraisal: The team works fast. Most deals complete underwriting within 3-5 business days. Step 4 — Close & Fund: Wire hits your account at closing. Average close time is 5-10 business days. To submit a scenario, you initially just need: property address, loan amount, purpose, and your experience level."
+    },
+    {
+      "id": "contact-info",
+      "category": "contact",
+      "title": "Contact Simply Capital",
+      "content": "Contact Simply Capital: Phone: (800) 555-1234, available Monday through Friday, 8am-6pm EST. Email: info@simplycapital.com, response within 1 business day. Response time for all new inquiries is under 24 hours. Lending area covers 30+ states with nationwide coverage. Visit the website at simplycapital.com to submit a scenario online. No cost for a term sheet, no obligation, and no credit pull until you decide to proceed."
+    },
+    {
+      "id": "faq-close-time",
+      "category": "faq",
+      "title": "FAQ: How quickly can Simply Capital close?",
+      "content": "Question: How quickly can Simply Capital close a loan? Answer: Simply Capital can close in as few as 5 business days for straightforward transactions. Most deals close within 7-10 business days from signed term sheet."
+    },
+    {
+      "id": "faq-credit-score",
+      "category": "faq",
+      "title": "FAQ: Minimum credit score requirement",
+      "content": "Question: Do you require a minimum credit score? Answer: Simply Capital prefers 620+ but evaluates each deal holistically. Strong collateral, experience, and deal metrics can offset lower credit scores."
+    },
+    {
+      "id": "faq-owner-occupied",
+      "category": "faq",
+      "title": "FAQ: Owner-occupied properties",
+      "content": "Question: Are Simply Capital's loans for owner-occupied properties? Answer: No. All Simply Capital loans are for investment properties only. Simply Capital does not lend on primary residences."
+    },
+    {
+      "id": "faq-states",
+      "category": "faq",
+      "title": "FAQ: States served",
+      "content": "Question: What states does Simply Capital lend in? Answer: Simply Capital currently lends in 30+ states. Contact them with your property state and they will confirm coverage immediately."
+    },
+    {
+      "id": "faq-term-sheet-cost",
+      "category": "faq",
+      "title": "FAQ: Cost for term sheet",
+      "content": "Question: Is there a cost to get a term sheet? Answer: No. Preliminary term sheets are provided at no cost and no obligation. Simply Capital does not pull credit until you decide to proceed."
+    },
+    {
+      "id": "faq-documentation",
+      "category": "faq",
+      "title": "FAQ: Documentation needed",
+      "content": "Question: What documentation do I need to submit a scenario? Answer: Initially, Simply Capital just needs the basics: property address, loan amount, purpose, and your experience level. Full documentation follows once you accept terms."
+    },
+    {
+      "id": "testimonial-marcus",
+      "category": "testimonial",
+      "title": "Testimonial: Marcus T. - Bridge Loan",
+      "content": "Marcus T., Principal at Redwood Capital Group, received a $4.2M bridge loan that was funded in 8 days. He says: 'Simply Capital funded our $4.2M bridge loan in 8 days. We've worked with conventional lenders and private lenders across the country — nobody moves like this team.'"
+    },
+    {
+      "id": "testimonial-sarah",
+      "category": "testimonial",
+      "title": "Testimonial: Sarah K. - Multifamily Bridge",
+      "content": "Sarah K., Managing Partner at Keystone Real Estate, received a $2.8M multifamily bridge loan. She says: 'We had a 10-day close deadline on a distressed multifamily acquisition. Simply Capital delivered term sheet in a day and funded on time. Game-changing lender.'"
+    },
+    {
+      "id": "testimonial-david",
+      "category": "testimonial",
+      "title": "Testimonial: David R. - Fix & Flip",
+      "content": "David R., Real Estate Investor, received an $875K fix & flip loan. He says: 'I've closed over 40 fix-and-flip deals over my career. Simply Capital is now my go-to for rehab financing. No nonsense, honest terms, and a team that actually picks up the phone.'"
+    },
+    {
+      "id": "testimonial-jennifer",
+      "category": "testimonial",
+      "title": "Testimonial: Jennifer M. - Construction Loan",
+      "content": "Jennifer M., Developer at Monarch Development Co., received a $6.1M construction loan for a 24-unit ground-up project. She says: 'Our construction loan for a 24-unit ground-up project was approved within a week. The structured draw schedule worked perfectly with our GC's timeline.'"
+    },
+    {
+      "id": "testimonial-robert",
+      "category": "testimonial",
+      "title": "Testimonial: Robert L. - DSCR Loan",
+      "content": "Robert L., Portfolio Investor, received a $1.4M DSCR loan. He says: 'DSCR loan closed without a single income document from me. If you're a portfolio landlord tired of conventional bank headaches, Simply Capital is your answer.'"
+    },
+    {
+      "id": "stats",
+      "category": "stats",
+      "title": "Simply Capital Key Statistics",
+      "content": "Simply Capital key statistics: $2B+ in loans funded across the nation. Average close time of 5 days from approval. 1,500+ deals closed and counting. Active in 30+ states with nationwide lending. 95% repeat client rate, which is industry-leading retention."
+    }
+  ]
+}
