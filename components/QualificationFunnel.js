@@ -8,7 +8,7 @@ import {
   RiToolsLine,
   RiBuilding3Line,
   RiBarChartBoxLine,
-  RiMapPinLine,
+  RiShoppingBagLine,
   RiCheckDoubleLine,
   RiSearchLine,
 } from 'react-icons/ri';
@@ -20,12 +20,12 @@ import {
 } from '../lib/loanCalculations';
 
 const loanTypeCards = [
-  { key: 'Bridge Loan', icon: RiArrowRightLine, title: 'Bridge Loan', tagline: 'Short-term leverage, long-term vision.' },
-  { key: 'Fix & Flip', icon: RiToolsLine, title: 'Fix & Flip', tagline: 'Renovation capital, built for speed.' },
-  { key: 'New Construction', icon: RiBuildingLine, title: 'New Construction', tagline: 'Ground-up confidence.' },
-  { key: 'DSCR / Rental', icon: RiBarChartBoxLine, title: 'DSCR / Rental', tagline: 'Qualify on the property, not the person.' },
-  { key: 'Ground-Up Development', icon: RiMapPinLine, title: 'Ground-Up Development', tagline: 'Vision backed by capital.' },
-  { key: 'Multifamily', icon: RiBuilding3Line, title: 'Multifamily', tagline: 'Scale your portfolio.' },
+  { key: 'SBA 7(a)', icon: RiShoppingBagLine, title: 'SBA Loan', tagline: 'Government-backed, competitively priced.' },
+  { key: 'Commercial Real Estate', icon: RiBuildingLine, title: 'Commercial RE', tagline: 'Finance the property, grow the business.' },
+  { key: 'Business Acquisition', icon: RiBuilding3Line, title: 'Business Acquisition', tagline: 'Buy the business, keep your cash.' },
+  { key: 'Construction & Development', icon: RiToolsLine, title: 'Construction', tagline: 'Build it. We fund it.' },
+  { key: 'Bridge & Hard Money', icon: RiArrowRightLine, title: 'Bridge / Hard Money', tagline: 'Move fast. Close faster.' },
+  { key: 'DSCR / No-Doc', icon: RiBarChartBoxLine, title: 'DSCR / No-Doc', tagline: 'Qualify on cash flow, not pay stubs.' },
 ];
 
 const states = [
@@ -36,7 +36,7 @@ const states = [
   'SD','TN','TX','UT','VT','VA','WA','WV','WI','WY',
 ];
 
-const propertyTypes = ['Single Family', 'Multifamily (2-4)', 'Multifamily (5+)', 'Mixed-Use', 'Commercial'];
+const propertyTypes = ['Office / Retail', 'Multifamily', 'Industrial / Warehouse', 'Mixed-Use', 'Single Family', 'Business (No RE)'];
 
 function CurrencyInput({ label, name, value, onChange, placeholder }) {
   const handleChange = (e) => {

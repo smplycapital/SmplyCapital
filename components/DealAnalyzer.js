@@ -3,11 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   RiArrowRightLine,
   RiBuildingLine,
-  RiToolsLine,
-  RiHomeLine,
   RiBuilding3Line,
   RiBarChartBoxLine,
-  RiMapPinLine,
+  RiShoppingBagLine,
+  RiToolsLine,
+  RiPercentLine,
 } from 'react-icons/ri';
 import {
   LOAN_PROGRAMS,
@@ -18,15 +18,15 @@ import {
 import EmailGateModal from './EmailGateModal';
 
 const loanTypeOptions = [
-  { key: 'Bridge Loan', icon: RiArrowRightLine, label: 'Bridge Loan' },
-  { key: 'Fix & Flip', icon: RiToolsLine, label: 'Fix & Flip' },
-  { key: 'New Construction', icon: RiBuildingLine, label: 'New Construction' },
-  { key: 'DSCR / Rental', icon: RiBarChartBoxLine, label: 'DSCR / Rental' },
-  { key: 'Ground-Up Development', icon: RiMapPinLine, label: 'Ground-Up' },
-  { key: 'Multifamily', icon: RiBuilding3Line, label: 'Multifamily' },
+  { key: 'SBA 7(a)', icon: RiShoppingBagLine, label: 'SBA Loan' },
+  { key: 'Commercial Real Estate', icon: RiBuildingLine, label: 'Commercial RE' },
+  { key: 'Business Acquisition', icon: RiBuilding3Line, label: 'Business Acq.' },
+  { key: 'Construction & Development', icon: RiToolsLine, label: 'Construction' },
+  { key: 'Bridge & Hard Money', icon: RiArrowRightLine, label: 'Bridge / Hard Money' },
+  { key: 'DSCR / No-Doc', icon: RiBarChartBoxLine, label: 'DSCR / No-Doc' },
 ];
 
-const propertyTypes = ['Single Family', 'Multifamily (2-4)', 'Multifamily (5+)', 'Mixed-Use', 'Commercial'];
+const propertyTypes = ['Office / Retail', 'Multifamily', 'Industrial / Warehouse', 'Mixed-Use', 'Single Family', 'Business (No RE)'];
 const experienceLevels = [
   { key: 'first', label: 'First Deal' },
   { key: '1-5', label: '1-5 Deals' },

@@ -8,57 +8,57 @@ const contactMethods = [
   {
     icon: RiPhoneLine,
     title: 'Call Us',
-    value: '(800) 555-1234',
-    sub: 'Mon–Fri, 8am–6pm EST',
-    href: 'tel:+18005551234',
+    value: '(516) 397-2280',
+    sub: 'Mon–Fri, 9am–6pm EST',
+    href: 'tel:+15163972280',
   },
   {
     icon: RiMailLine,
     title: 'Email Us',
-    value: 'info@simplycapital.com',
+    value: 'info@smplycapital.com',
     sub: 'Response within 1 business day',
-    href: 'mailto:info@simplycapital.com',
+    href: 'mailto:info@smplycapital.com',
   },
   {
     icon: RiTimeLine,
-    title: 'Response Time',
+    title: 'Term Sheet',
     value: '< 24 Hours',
-    sub: 'For all new inquiries',
+    sub: 'For all new submissions',
     href: null,
   },
   {
     icon: RiMapPinLine,
-    title: 'Lending Area',
-    value: '30+ States',
-    sub: 'Nationwide coverage',
+    title: 'Coverage',
+    value: 'Nationwide',
+    sub: '70+ lending partners',
     href: null,
   },
 ];
 
 const faqs = [
   {
-    q: 'How quickly can Simply Capital close a loan?',
-    a: 'We can close in as few as 5 business days for straightforward transactions. Most deals close within 7–10 business days from signed term sheet.',
+    q: 'What does it cost to work with Smply Capital?',
+    a: '$0 upfront — ever. We are compensated by the lender at closing, not by you. There are no application fees, retainers, or consulting fees to explore your options.',
   },
   {
-    q: 'Do you require a minimum credit score?',
-    a: 'We prefer 620+ but evaluate each deal holistically. Strong collateral, experience, and deal metrics can offset lower credit scores.',
+    q: 'How is a broker different from going directly to a bank?',
+    a: 'When you go to one bank, you get one set of terms. When you work with us, your deal goes to 70+ lenders simultaneously. More competition means better rates, better terms, and a higher chance of approval.',
   },
   {
-    q: 'Are your loans for owner-occupied properties?',
-    a: 'No. All Simply Capital loans are for investment properties only. We do not lend on primary residences.',
+    q: 'What loan types do you broker?',
+    a: 'SBA 7(a), SBA 504, Commercial Real Estate, Business Acquisition, Construction & Development, Bridge & Hard Money, and DSCR / No-Doc loans up to $20M.',
   },
   {
-    q: 'What states do you lend in?',
-    a: 'We currently lend in 30+ states. Contact us with your property state and we will confirm coverage immediately.',
+    q: 'How quickly can I get a term sheet?',
+    a: 'Most clients receive preliminary term sheets within 24 hours of submitting a complete scenario. No obligation, no credit pull at this stage.',
   },
   {
-    q: 'Is there a cost to get a term sheet?',
-    a: 'No. Preliminary term sheets are provided at no cost and no obligation. We do not pull credit until you decide to proceed.',
+    q: 'Do you handle owner-occupied commercial properties?',
+    a: 'Yes. We work with both owner-occupied commercial real estate and investment properties. SBA programs are specifically designed for owner-occupied business properties.',
   },
   {
-    q: 'What documentation do I need to submit a scenario?',
-    a: 'Initially, we just need the basics: property address, loan amount, purpose, and your experience level. Full documentation follows once you accept terms.',
+    q: 'What information do I need to get started?',
+    a: 'Just the basics: loan purpose, requested amount, property or business details, and a brief overview of your financials. We will guide you through anything else we need.',
   },
 ];
 
@@ -66,10 +66,10 @@ export default function ContactPage() {
   return (
     <>
       <Head>
-        <title>Contact Us — Simply Capital Private Lending</title>
+        <title>Contact Us — Smply Capital Commercial Loan Broker</title>
         <meta
           name="description"
-          content="Contact Simply Capital to discuss your real estate financing needs. Submit a loan scenario for a term sheet within 24 hours. Call, email, or use our online form."
+          content="Contact Smply Capital to submit a loan scenario. We shop 70+ lenders to find you the best commercial financing terms. $0 upfront fees, term sheets in 24 hours."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -179,9 +179,9 @@ export default function ContactPage() {
                   Our loan officers are available Monday through Friday, 8am–6pm EST.
                   We welcome calls about any deal type or size.
                 </p>
-                <a href="tel:+18005551234" className="btn-primary w-full text-center text-xs justify-center">
+                <a href="tel:+15163972280" className="btn-primary w-full text-center text-xs justify-center">
                   <RiPhoneLine className="w-3.5 h-3.5" />
-                  (800) 555-1234
+                  (516) 397-2280
                 </a>
               </div>
             </div>

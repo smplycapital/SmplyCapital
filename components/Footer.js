@@ -63,18 +63,18 @@ export default function Footer() {
             </p>
             <div className="space-y-2.5">
               <a
-                href="tel:+18005551234"
+                href="tel:+15163972280"
                 className="flex items-center gap-3 text-white/40 hover:text-gold transition-colors text-sm"
               >
                 <RiPhoneLine className="w-4 h-4 flex-shrink-0" />
-                (800) 555-1234
+                (516) 397-2280
               </a>
               <a
-                href="mailto:info@simplycapital.com"
+                href="mailto:info@smplycapital.com"
                 className="flex items-center gap-3 text-white/40 hover:text-gold transition-colors text-sm"
               >
                 <RiMailLine className="w-4 h-4 flex-shrink-0" />
-                info@simplycapital.com
+                info@smplycapital.com
               </a>
               <div className="flex items-start gap-3 text-white/40 text-sm">
                 <RiMapPinLine className="w-4 h-4 flex-shrink-0 mt-0.5" />
@@ -147,9 +147,8 @@ export default function Footer() {
       <div className="bg-navy-900/50 py-4">
         <div className="container-custom">
           <p className="text-white/20 text-[10px] leading-relaxed text-center">
-            Simply Capital is a private money lender. Loans are for investment purposes only and are not available for owner-occupied residential properties.
-            All loan programs subject to credit approval. Rates and terms may vary. This is not an offer to lend. Equal Housing Lender.
-            NMLS #XXXXXXX.
+            Smply Capital LLC is a commercial loan broker, not a direct lender. All financing subject to underwriting approval by the funding lender.
+            Rates and terms may vary based on borrower qualifications and market conditions. This is not a commitment to lend. Equal Housing Lender.
           </p>
         </div>
       </div>

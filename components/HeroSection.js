@@ -32,7 +32,7 @@ export default function HeroSection() {
           {/* Pre-headline */}
           <div className="flex items-center gap-3 mb-8 opacity-0 animate-fade-up" style={{ animationDelay: '100ms', animationFillMode: 'forwards' }}>
             <div className="w-8 h-px bg-gold" />
-            <span className="section-subheading text-xs">Private Capital. Executed Simply.</span>
+            <span className="section-subheading text-xs">Commercial Lending. Made Simple.</span>
           </div>
 
           {/* Main Headline */}
@@ -40,9 +40,9 @@ export default function HeroSection() {
             className="section-heading text-white mb-6 opacity-0 animate-fade-up"
             style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}
           >
-            Capital When You
+            One Application.
             <br />
-            <span className="text-gradient-gold italic font-display">Need It Most.</span>
+            <span className="text-gradient-gold italic font-display">70+ Lenders.</span>
           </h1>
 
           {/* Subheadline */}
@@ -50,9 +50,9 @@ export default function HeroSection() {
             className="text-white/60 text-lg md:text-xl max-w-2xl leading-relaxed mb-10 opacity-0 animate-fade-up"
             style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}
           >
-            Simply Capital is a direct private lender providing fast, flexible financing
-            for real estate investors across the nation. Bridge loans, fix-and-flip,
-            construction, and more — funded in as little as 5 days.
+            Smply Capital is a commercial loan broker that shops your deal across 70+ lending
+            partners to find you the best terms. SBA loans, commercial real estate, business
+            acquisition, bridge, DSCR, and more — $0 upfront fees, always.
           </p>
 
           {/* Stats Row */}
@@ -61,9 +61,9 @@ export default function HeroSection() {
             style={{ animationDelay: '400ms', animationFillMode: 'forwards' }}
           >
             {[
-              { value: '$2B+', label: 'Funded' },
-              { value: '5 Days', label: 'Avg. Close' },
-              { value: '30+', label: 'States' },
+              { value: '70+', label: 'Lenders' },
+              { value: '$0', label: 'Upfront Fees' },
+              { value: '24hr', label: 'Term Sheet' },
             ].map((s) => (
               <div key={s.label} className="border-l border-gold/30 pl-4">
                 <div className="font-display text-2xl font-bold text-gold leading-tight">{s.value}</div>

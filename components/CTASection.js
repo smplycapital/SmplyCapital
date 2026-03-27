@@ -3,12 +3,12 @@ import { useInView } from 'react-intersection-observer';
 import { RiArrowRightLine, RiCheckLine } from 'react-icons/ri';
 
 const differentiators = [
-  'Direct lender — no broker middleman',
-  'Fast approvals: term sheets in 24 hours',
-  'Dedicated loan officer on every deal',
+  'We shop 70+ lenders so you get the best rate',
+  '$0 upfront fees — ever',
+  'Term sheets within 24 hours',
+  'SBA, commercial RE, bridge, DSCR & more',
+  'Dedicated loan advisor on every deal',
   'Flexible underwriting for complex scenarios',
-  'Competitive rates with no hidden fees',
-  'Nationwide lending across 30+ states',
 ];
 
 export default function CTASection() {
@@ -28,14 +28,14 @@ export default function CTASection() {
           >
             <span className="section-subheading">Why Simply Capital</span>
             <h2 className="section-heading text-white mt-3 mb-6">
-              A Lender That
+              We Do the Shopping.
               <br />
-              <span className="text-gradient-gold">Moves With You</span>
+              <span className="text-gradient-gold">You Get the Best Rate.</span>
             </h2>
             <p className="text-white/50 leading-relaxed mb-10">
-              We built Simply Capital for the investor who needs answers fast and capital
-              faster. No bureaucracy. No committee. Just direct decision-making from a team
-              that understands your deal.
+              As a commercial loan broker, we work for you — not the bank. We submit your
+              scenario to our network of 70+ lenders simultaneously and bring back the best
+              terms available. One application, maximum competition, zero upfront cost.
             </p>
             <ul className="space-y-3 mb-10">
               {differentiators.map((item) => (
@@ -48,8 +48,8 @@ export default function CTASection() {
               ))}
             </ul>
             <div className="flex gap-4">
-              <Link href="/contact-us" className="btn-primary">
-                Start a Conversation
+              <Link href="/get-started" className="btn-primary">
+                Get Started
                 <RiArrowRightLine className="w-4 h-4" />
               </Link>
               <Link href="/about" className="btn-ghost">
@@ -67,22 +67,22 @@ export default function CTASection() {
                 {
                   step: '01',
                   title: 'Submit Your Scenario',
-                  desc: 'Share deal details online, by phone, or email. We respond same business day.',
+                  desc: 'Share deal details online, by phone, or email. No upfront fees, no obligation.',
                 },
                 {
                   step: '02',
-                  title: 'Receive Term Sheet',
-                  desc: 'Preliminary terms delivered within 24 hours. No obligation, no credit pull.',
+                  title: 'We Shop the Market',
+                  desc: 'We present your deal to 70+ lending partners and collect competing offers.',
                 },
                 {
                   step: '03',
-                  title: 'Underwriting & Appraisal',
-                  desc: 'Our team works fast. Most deals complete underwriting within 3–5 business days.',
+                  title: 'Review Your Options',
+                  desc: 'We deliver the best term sheets within 24 hours. You choose the lender.',
                 },
                 {
                   step: '04',
                   title: 'Close & Fund',
-                  desc: 'Wire hits your account at closing. Average close time: 5–10 business days.',
+                  desc: 'We coordinate the process from underwriting through closing. You get funded.',
                 },
               ].map((s, i) => (
                 <div key={s.step} className="flex gap-5 card-dark hover:border-gold/30 transition-colors duration-300">

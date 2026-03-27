@@ -3,79 +3,79 @@ import { useInView } from 'react-intersection-observer';
 import {
   RiArrowRightLine,
   RiBuildingLine,
-  RiToolsLine,
-  RiHomeLine,
   RiBuilding3Line,
   RiBarChartBoxLine,
-  RiMapPinLine,
+  RiShoppingBagLine,
+  RiToolsLine,
+  RiPercentLine,
 } from 'react-icons/ri';
 
 export const loanPrograms = [
   {
-    id: 'bridge',
-    icon: RiArrowRightLine,
-    title: 'Bridge Loans',
-    tagline: 'Short-term leverage, long-term vision.',
+    id: 'sba',
+    icon: RiShoppingBagLine,
+    title: 'SBA Loans',
+    tagline: 'Government-backed, competitively priced.',
     description:
-      'Acquire, stabilize, or reposition assets fast. Our bridge loans give investors the speed and flexibility needed to capitalize on time-sensitive opportunities.',
-    highlights: ['Up to 80% LTV', '12–24 Month Terms', 'Close in 5–10 Days', 'No Income Verification'],
-    range: '$250K – $25M+',
-    href: '/loan-programs#bridge',
+      'SBA 7(a) and 504 programs for owner-operated businesses. Low down payments, long terms, and rates tied to Prime — we match you with the right SBA lender from our network.',
+    highlights: ['SBA 7(a) & 504', 'As Low as 10% Down', 'Terms Up to 25 Years', 'Prime + Spread Pricing'],
+    range: '$150K – $5M',
+    href: '/loan-programs#sba',
   },
   {
-    id: 'fix-flip',
-    icon: RiToolsLine,
-    title: 'Fix & Flip',
-    tagline: 'Renovation capital, built for speed.',
+    id: 'commercial-re',
+    icon: RiBuildingLine,
+    title: 'Commercial Real Estate',
+    tagline: 'Finance the property, grow the business.',
     description:
-      'From single-family to small multifamily, we fund purchase plus renovation costs so you can focus on the project — not the paperwork.',
-    highlights: ['Up to 90% LTC', '100% Rehab Funded', 'Draw Schedule Flexibility', 'Experienced Investors Preferred'],
-    range: '$100K – $5M',
-    href: '/loan-programs#fix-flip',
+      'Acquisition, refinance, or cash-out on owner-occupied and investment commercial properties. We work with 70+ lenders to find the best permanent financing available.',
+    highlights: ['Up to 80% LTV', '20–30 Year Amortization', 'Fixed & Variable Rates', 'Mixed-Use & Office Welcome'],
+    range: '$500K – $20M',
+    href: '/loan-programs#commercial-re',
+  },
+  {
+    id: 'business-acquisition',
+    icon: RiBuilding3Line,
+    title: 'Business Acquisition',
+    tagline: 'Buy the business, keep your cash.',
+    description:
+      'Financing for business purchases, partner buyouts, and expansions. SBA-backed options preferred. We structure the deal and match you with the right lender.',
+    highlights: ['SBA-Backed Preferred', '10–30% Down', 'Terms Up to 10 Years', 'Working Capital Included'],
+    range: '$200K – $5M',
+    href: '/loan-programs#business-acquisition',
   },
   {
     id: 'construction',
-    icon: RiBuildingLine,
-    title: 'New Construction',
-    tagline: 'Ground-up confidence.',
+    icon: RiToolsLine,
+    title: 'Construction & Development',
+    tagline: 'Build it. We fund it.',
     description:
-      'Build with confidence. Our construction loans cover vertical development projects with structured draw schedules and dedicated support from start to certificate of occupancy.',
-    highlights: ['Up to 85% LTC', 'Interest Reserve Included', 'Structured Draws', '12–24 Month Terms'],
-    range: '$500K – $20M+',
+      'Ground-up and renovation construction loans with structured draw schedules. Interest-only during construction. We match you with lenders who understand your project timeline.',
+    highlights: ['Up to 80% LTC', 'Interest-Only Draws', '12–24 Month Terms', 'Residential & Commercial'],
+    range: '$500K – $20M',
     href: '/loan-programs#construction',
+  },
+  {
+    id: 'bridge',
+    icon: RiArrowRightLine,
+    title: 'Bridge & Hard Money',
+    tagline: 'Move fast. Close faster.',
+    description:
+      'Short-term bridge and hard money loans for time-sensitive acquisitions, refinances, and transitions. Asset-based underwriting — close in days, not months.',
+    highlights: ['Up to 75% LTV', 'Asset-Based Approval', '6–24 Month Terms', 'Fast Close Available'],
+    range: '$250K – $10M',
+    href: '/loan-programs#bridge',
   },
   {
     id: 'dscr',
     icon: RiBarChartBoxLine,
-    title: 'DSCR / Rental Loans',
-    tagline: 'Qualify on the property, not the person.',
+    title: 'DSCR / No-Doc',
+    tagline: 'Qualify on cash flow, not pay stubs.',
     description:
-      'Designed for long-term investors building rental portfolios. DSCR loans underwrite based on property cash flow — not your personal income.',
-    highlights: ['DSCR ≥ 1.0', '30-Year Fixed Available', 'No Tax Returns', 'Single or Portfolio'],
+      'Long-term rental and investment property financing underwritten on property cash flow. No income verification, no tax returns — ideal for self-employed investors.',
+    highlights: ['No Income Docs', '30-Year Terms Available', 'DSCR ≥ 1.0', 'Single or Portfolio'],
     range: '$150K – $10M',
     href: '/loan-programs#dscr',
-  },
-  {
-    id: 'ground-up',
-    icon: RiMapPinLine,
-    title: 'Ground-Up Development',
-    tagline: 'Vision backed by capital.',
-    description:
-      'Larger-scale residential and mixed-use development projects deserve a lender who understands entitlements, phasing, and complex capital structures.',
-    highlights: ['Up to 70% LTC', 'Horizontal & Vertical', 'Pre-development Considered', 'Experienced Sponsors'],
-    range: '$1M – $50M+',
-    href: '/loan-programs#ground-up',
-  },
-  {
-    id: 'multifamily',
-    icon: RiBuilding3Line,
-    title: 'Multifamily',
-    tagline: 'Scale your portfolio.',
-    description:
-      'Acquisition, value-add, or cash-out on 5+ unit properties. We understand multifamily underwriting and move with the urgency the market demands.',
-    highlights: ['5+ Units', 'Value-Add & Stabilized', 'Cash-Out Options', 'Bridge or Perm'],
-    range: '$500K – $25M+',
-    href: '/loan-programs#multifamily',
   },
 ];
 
@@ -143,11 +143,11 @@ export default function LoanProgramsGrid({ limit }) {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div>
-            <span className="section-subheading">What We Lend On</span>
+            <span className="section-subheading">Our Loan Programs</span>
             <h2 className="section-heading text-white mt-3">
-              Loan Programs
+              8+ Programs.
               <br />
-              <span className="text-gradient-gold">Built for Investors</span>
+              <span className="text-gradient-gold">70+ Lenders.</span>
             </h2>
           </div>
           {limit && (

@@ -2,11 +2,11 @@ import { useInView } from 'react-intersection-observer';
 import { useEffect, useState } from 'react';
 
 const stats = [
-  { value: 2, suffix: 'B+', prefix: '$', label: 'Loans Funded', detail: 'across the nation' },
-  { value: 5, suffix: ' Days', label: 'Average Close', detail: 'from approval' },
-  { value: 1500, suffix: '+', label: 'Deals Closed', detail: 'and counting' },
-  { value: 30, suffix: '+', label: 'States Active', detail: 'nationwide lending' },
-  { value: 95, suffix: '%', label: 'Repeat Clients', detail: 'industry-leading retention' },
+  { value: 70, suffix: '+', label: 'Lending Partners', detail: 'competing for your deal' },
+  { value: 20, suffix: 'M', prefix: '$', label: 'Max Deal Size', detail: 'across all programs' },
+  { value: 8, suffix: '+', label: 'Loan Programs', detail: 'SBA, CRE, bridge & more' },
+  { value: 0, suffix: '', prefix: '$', label: 'Upfront Fees', detail: 'no cost to apply' },
+  { value: 24, suffix: 'hrs', label: 'Term Sheet', detail: 'average turnaround' },
 ];
 
 function CountUp({ target, suffix, prefix, inView }) {

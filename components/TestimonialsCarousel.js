@@ -5,38 +5,45 @@ import { useInView } from 'react-intersection-observer';
 const testimonials = [
   {
     quote:
-      "Simply Capital funded our $4.2M bridge loan in 8 days. We've worked with conventional lenders and private lenders across the country — nobody moves like this team.",
-    name: 'Marcus T.',
-    title: 'Principal, Redwood Capital Group',
-    deal: 'Bridge Loan — $4.2M',
+      "I spent weeks trying to get SBA financing on my own and kept hitting dead ends. Smply Capital came back with three competing offers within 24 hours. Closed in 45 days.",
+    name: 'James R.',
+    title: 'Restaurant Owner, Miami FL',
+    deal: 'SBA 7(a) — $850K',
   },
   {
     quote:
-      "We had a 10-day close deadline on a distressed multifamily acquisition. Simply Capital delivered term sheet in a day and funded on time. Game-changing lender.",
-    name: 'Sarah K.',
-    title: 'Managing Partner, Keystone Real Estate',
-    deal: 'Multifamily Bridge — $2.8M',
-  },
-  {
-    quote:
-      "I've closed over 40 fix-and-flip deals over my career. Simply Capital is now my go-to for rehab financing. No nonsense, honest terms, and a team that actually picks up the phone.",
-    name: 'David R.',
+      "As a self-employed investor, no-doc loans always came with terrible rates. Smply Capital shopped my DSCR loan to their whole network and saved me nearly a full point.",
+    name: 'Maria T.',
     title: 'Real Estate Investor',
-    deal: 'Fix & Flip — $875K',
+    deal: 'DSCR Loan — $1.2M',
   },
   {
     quote:
-      "Our construction loan for a 24-unit ground-up project was approved within a week. The structured draw schedule worked perfectly with our GC's timeline.",
-    name: 'Jennifer M.',
-    title: 'Developer, Monarch Development Co.',
-    deal: 'Construction Loan — $6.1M',
+      "We needed bridge financing fast on a commercial acquisition. The team had a term sheet on my desk the next morning and we closed in under two weeks. Truly impressive.",
+    name: 'David K.',
+    title: 'Commercial Real Estate Investor',
+    deal: 'Bridge Loan — $2.4M',
   },
   {
     quote:
-      "DSCR loan closed without a single income document from me. If you're a portfolio landlord tired of conventional bank headaches, Simply Capital is your answer.",
-    name: 'Robert L.',
+      "Buying out my business partner seemed impossible without the right lender. Smply Capital structured the deal with an SBA loan and got us across the finish line.",
+    name: 'Sandra M.',
+    title: 'Business Owner',
+    deal: 'Business Acquisition — $1.6M',
+  },
+  {
+    quote:
+      "Construction loans are notoriously hard to place. These guys knew exactly which lenders in their network would work for our ground-up project and made it happen.",
+    name: 'Carlos V.',
+    title: 'Developer & General Contractor',
+    deal: 'Construction Loan — $3.8M',
+  },
+  {
+    quote:
+      "I've worked with brokers before who just blast your info everywhere. Smply Capital was selective, professional, and actually advocated for us with the lender. Big difference.",
+    name: 'Ashley P.',
     title: 'Portfolio Investor',
-    deal: 'DSCR Loan — $1.4M',
+    deal: 'Commercial RE — $975K',
   },
 ];
 

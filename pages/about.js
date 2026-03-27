@@ -7,63 +7,41 @@ import { RiArrowRightLine, RiCheckLine } from 'react-icons/ri';
 
 const values = [
   {
-    title: 'Speed Without Compromise',
-    desc: 'Every day matters in real estate. We built our process around fast decisions and faster funding — without cutting corners on diligence.',
+    title: 'We Work for You',
+    desc: 'As a broker, our loyalty is to our clients — not the lender. We negotiate on your behalf and only win when you close.',
   },
   {
-    title: 'Direct Lending',
-    desc: 'We are the bank. No brokers, no committees, no middlemen. Your loan officer has authority to make decisions.',
+    title: '$0 Upfront Fees',
+    desc: 'No application fees, no retainers. We are compensated by the lender at closing, so you never pay out of pocket to explore your options.',
   },
   {
-    title: 'Investor-First Mindset',
-    desc: 'Our team is made up of investors and former real estate operators. We understand your deal because we\'ve been in your shoes.',
+    title: 'Maximum Market Exposure',
+    desc: 'One application reaches 70+ lenders simultaneously. More competition means better rates, better terms, and more options for you.',
   },
   {
-    title: 'Transparent Terms',
-    desc: 'No surprises at closing. What we quote is what you get. Our term sheets reflect actual loan terms, not teaser rates.',
+    title: 'Transparent Process',
+    desc: 'We explain every offer, every term, and every fee — in plain language. No surprises, no hidden costs, no pressure.',
   },
 ];
 
-const team = [
-  {
-    name: 'James Thornton',
-    title: 'CEO & Co-Founder',
-    bio: '15+ years in real estate finance. Former VP at a national private equity firm before co-founding Simply Capital.',
-  },
-  {
-    name: 'Allison Reed',
-    title: 'Chief Credit Officer',
-    bio: 'Underwritten $1B+ in commercial and residential real estate loans. Brings institutional discipline to private lending.',
-  },
-  {
-    name: 'Michael Chen',
-    title: 'Head of Capital Markets',
-    bio: 'Manages institutional funding relationships ensuring Simply Capital maintains competitive rates and ample loan capacity.',
-  },
-  {
-    name: 'Sarah Nobile',
-    title: 'Senior Loan Officer',
-    bio: '10 years structuring complex bridge and construction loans. Known for creative deal structuring on challenging transactions.',
-  },
-];
+const team = [];
 
 const milestones = [
-  { year: '2015', event: 'Simply Capital founded with focus on bridge lending in the Southeast.' },
-  { year: '2017', event: 'Expanded nationally, reaching 15 states and $100M in cumulative originations.' },
-  { year: '2019', event: 'Launched DSCR and construction lending programs. Surpassed $500M funded.' },
-  { year: '2021', event: 'Secured institutional capital facility, enabling larger loan sizes up to $50M+.' },
-  { year: '2023', event: 'Crossed $2B in total originations across 30+ states.' },
-  { year: '2024', event: 'Expanded ground-up development lending and multifamily programs nationwide.' },
+  { year: '2020', event: 'Smply Capital founded with a mission to make commercial lending simple and transparent.' },
+  { year: '2021', event: 'Established lending partner network. Closed first SBA and commercial real estate transactions.' },
+  { year: '2022', event: 'Expanded to bridge, DSCR, and business acquisition programs. Network grew to 40+ lenders.' },
+  { year: '2023', event: 'Surpassed 70+ active lending partners. Added construction and hard money programs.' },
+  { year: '2024', event: 'Achieved $20M max deal size. Now serving clients across all 50 states.' },
 ];
 
 export default function AboutPage() {
   return (
     <>
       <Head>
-        <title>About Simply Capital — Private Real Estate Lending</title>
+        <title>About Smply Capital — Commercial Loan Broker</title>
         <meta
           name="description"
-          content="Learn about Simply Capital — a direct private lender founded by investors, for investors. Our mission is to make private capital simple, fast, and transparent."
+          content="Learn about Smply Capital — a commercial loan broker connecting businesses and investors with 70+ lending partners. $0 upfront fees, term sheets in 24 hours."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -89,14 +67,14 @@ export default function AboutPage() {
               <span className="section-subheading text-xs">Our Story</span>
             </div>
             <h1 className="section-heading text-white mb-6">
-              Capital Built
+              Commercial Lending
               <br />
-              <span className="text-gradient-gold">By Investors</span>
+              <span className="text-gradient-gold">Made Simple</span>
             </h1>
             <p className="text-white/60 text-lg leading-relaxed max-w-xl">
-              Simply Capital was founded on a simple premise: real estate investors
-              deserve a lending partner who moves at the speed of opportunity —
-              one that speaks the language of deals.
+              Smply Capital was founded on one idea: borrowers deserve access to the full
+              market — not just one lender's menu. We built a better way to find commercial
+              financing.
             </p>
           </div>
         </div>
@@ -112,22 +90,23 @@ export default function AboutPage() {
             <div>
               <span className="section-subheading">Our Mission</span>
               <h2 className="section-heading text-white mt-3 mb-6">
-                Making Private Capital
+                One Application.
                 <br />
-                <span className="text-gradient-gold">Simply Accessible</span>
+                <span className="text-gradient-gold">Maximum Competition.</span>
               </h2>
               <p className="text-white/50 leading-relaxed mb-6">
-                We started Simply Capital because we lived the problem. As investors ourselves,
-                we knew what it felt like to have the right deal, the right timeline, and the
-                wrong lender. Bureaucratic delays. Hidden fees. Loan officers who didn&apos;t
-                understand real estate.
+                Getting a commercial loan the traditional way means walking into one bank,
+                accepting their one set of terms, and hoping it works. We built Smply Capital
+                to change that.
               </p>
               <p className="text-white/50 leading-relaxed mb-8">
-                So we built the lender we wished existed — one that operates with urgency,
-                communicates clearly, and genuinely cares whether your deal closes.
+                When you submit a scenario to us, we take it to our entire network of 70+ lending
+                partners simultaneously. Banks, credit unions, SBA lenders, private lenders, and
+                specialty finance companies — all competing for your business. You get the best
+                rate available. We charge you nothing upfront, ever.
               </p>
-              <Link href="/contact-us" className="btn-primary">
-                Work With Us
+              <Link href="/get-started" className="btn-primary">
+                Get Started
                 <RiArrowRightLine className="w-4 h-4" />
               </Link>
             </div>
@@ -152,7 +131,7 @@ export default function AboutPage() {
           <div className="text-center mb-14">
             <span className="section-subheading">Our Journey</span>
             <h2 className="section-heading text-white mt-3">
-              A Decade of <span className="text-gradient-gold">Execution</span>
+              How We <span className="text-gradient-gold">Got Here</span>
             </h2>
           </div>
           <div className="max-w-3xl mx-auto relative">
@@ -177,38 +156,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section id="team" className="py-24 bg-navy-950 scroll-mt-20">
-        <div className="container-custom">
-          <div className="text-center mb-14">
-            <span className="section-subheading">The Team</span>
-            <h2 className="section-heading text-white mt-3">
-              Led by <span className="text-gradient-gold">Experienced Practitioners</span>
-            </h2>
-            <p className="text-white/50 text-sm max-w-xl mx-auto mt-4">
-              Our team brings decades of combined experience in real estate, lending,
-              and capital markets — and we&apos;re all investors too.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {team.map((member) => (
-              <div
-                key={member.name}
-                className="card-dark text-center hover:border-gold/25 transition-colors duration-300 group"
-              >
-                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gold/10 border border-gold/20 flex items-center justify-center group-hover:bg-gold/20 transition-colors duration-200">
-                  <span className="font-display text-gold text-2xl font-bold">
-                    {member.name.charAt(0)}
-                  </span>
-                </div>
-                <h3 className="text-white font-semibold text-sm">{member.name}</h3>
-                <p className="text-gold/70 text-[10px] uppercase tracking-wide mt-1 mb-3">{member.title}</p>
-                <p className="text-white/40 text-xs leading-relaxed">{member.bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Why Simply Capital Checklist */}
       <section className="py-16 bg-navy-900">
@@ -217,21 +164,21 @@ export default function AboutPage() {
             <div>
               <span className="section-subheading">Why Simply Capital</span>
               <h2 className="font-display text-3xl font-bold text-white mt-3 mb-8">
-                The Unfair Advantage<br />
-                <span className="text-gradient-gold">for Your Portfolio</span>
+                The Smply Capital<br />
+                <span className="text-gradient-gold">Advantage</span>
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
-                  'Direct lender, not a broker',
+                  '$0 upfront fees, always',
+                  '70+ competing lenders',
                   'Term sheets in 24 hours',
-                  'Close in 5–10 days',
-                  'No income verification',
-                  'Asset-based underwriting',
-                  'No prepayment on most programs',
-                  'Dedicated loan officer',
-                  'Competitive institutional pricing',
-                  'Up to 90% LTV/LTC',
-                  '$2B+ funded track record',
+                  'SBA, CRE, bridge, DSCR & more',
+                  'Dedicated loan advisor',
+                  'Nationwide coverage',
+                  'No income docs on DSCR',
+                  'Up to $20M deal size',
+                  'Transparent, no hidden fees',
+                  'We work for you, not the bank',
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-2">
                     <RiCheckLine className="w-4 h-4 text-gold flex-shrink-0" />
@@ -248,11 +195,11 @@ export default function AboutPage() {
                 Ready to Partner?
               </h3>
               <p className="text-white/40 text-sm leading-relaxed mb-6">
-                Join over 1,500 investors who trust Simply Capital for their
-                private lending needs. Submit your first scenario today.
+                Submit your scenario today and see competing offers from
+                70+ lenders — at no cost to you.
               </p>
-              <Link href="/contact-us" className="btn-primary w-full justify-center">
-                Start a Conversation
+              <Link href="/get-started" className="btn-primary w-full justify-center">
+                Get Started
               </Link>
               <p className="text-white/25 text-xs mt-4">No obligation. No credit pull.</p>
             </div>

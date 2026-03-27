@@ -7,28 +7,28 @@ import SubmitScenarioForm from '../components/SubmitScenarioForm';
 import { RiArrowRightLine, RiCheckLine } from 'react-icons/ri';
 
 const termDetails = [
-  { label: 'Loan Amounts', value: '$100K – $50M+' },
+  { label: 'Loan Amounts', value: '$150K – $20M' },
   { label: 'LTV', value: 'Up to 90%' },
-  { label: 'Terms', value: '6 – 36 Months' },
-  { label: 'Interest Rate', value: 'From 9.99%' },
-  { label: 'Origination', value: '1 – 3 Points' },
-  { label: 'Close Time', value: '5 – 10 Business Days' },
-  { label: 'Pre-payment Penalty', value: 'None on Most Programs' },
-  { label: 'Recourse', value: 'Full Recourse' },
+  { label: 'Programs', value: '8+ Available' },
+  { label: 'Lending Partners', value: '70+' },
+  { label: 'Upfront Fees', value: '$0' },
+  { label: 'Term Sheets', value: '< 24 Hours' },
+  { label: 'SBA Programs', value: 'Available' },
+  { label: 'Coverage', value: 'Nationwide' },
 ];
 
 export default function LoanProgramsPage() {
   return (
     <>
       <Head>
-        <title>Loan Programs — Simply Capital Private Lending</title>
+        <title>Loan Programs — Smply Capital Commercial Loan Broker</title>
         <meta
           name="description"
-          content="Simply Capital offers bridge loans, fix-and-flip financing, construction loans, DSCR rental loans, ground-up development, and multifamily loans for real estate investors."
+          content="Smply Capital brokers SBA loans, commercial real estate, business acquisition, construction, bridge, and DSCR financing through 70+ lending partners. $0 upfront fees."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Loan Programs — Simply Capital" />
-        <meta property="og:description" content="Bridge, Fix & Flip, Construction, DSCR, Ground-Up, and Multifamily lending for real estate investors." />
+        <meta property="og:title" content="Loan Programs — Smply Capital" />
+        <meta property="og:description" content="SBA, Commercial RE, Business Acquisition, Construction, Bridge, and DSCR financing through 70+ lending partners. $0 upfront fees." />
       </Head>
 
       <NavBar />
@@ -57,8 +57,9 @@ export default function LoanProgramsPage() {
               <span className="text-gradient-gold">Every Strategy</span>
             </h1>
             <p className="text-white/60 text-lg leading-relaxed mb-8 max-w-xl">
-              From fast bridge financing to long-term DSCR rental loans, Simply Capital
-              has a program built for your investment strategy. Explore our full suite below.
+              From SBA business loans to short-term bridge financing, Smply Capital shops
+              your scenario across 70+ lending partners to find you the best available terms.
+              $0 upfront fees on every program.
             </p>
             <div className="flex flex-wrap gap-3">
               {loanPrograms.map((p) => (
@@ -146,10 +147,10 @@ export default function LoanProgramsPage() {
                       <h4 className="text-white text-sm font-semibold mb-3">Quick Scenario</h4>
                       <div className="space-y-2">
                         {[
-                          { label: 'Property Type', value: 'Investment Only' },
-                          { label: 'Close Time', value: '5–10 Bus. Days' },
-                          { label: 'Recourse', value: 'Full Recourse' },
-                          { label: 'Credit Score', value: '620+ Min.' },
+                          { label: 'Upfront Fees', value: '$0' },
+                          { label: 'Term Sheet', value: '< 24 Hours' },
+                          { label: 'Lending Partners', value: '70+' },
+                          { label: 'Coverage', value: 'Nationwide' },
                         ].map((item) => (
                           <div key={item.label} className="flex justify-between">
                             <span className="text-white/30 text-xs">{item.label}</span>

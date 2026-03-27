@@ -128,11 +128,11 @@ export default function NavBar() {
             {/* CTA + Hamburger */}
             <div className="flex items-center gap-4">
               <a
-                href="tel:+18005551234"
+                href="tel:+15163972280"
                 className="hidden md:flex items-center gap-2 text-white/70 hover:text-gold transition-colors duration-200 text-sm"
               >
                 <RiPhoneLine className="w-4 h-4" />
-                <span className="font-medium">(800) 555-1234</span>
+                <span className="font-medium">(516) 397-2280</span>
               </a>
               <Link href="/get-started" className="hidden lg:inline-flex btn-primary text-xs py-2.5 px-5">
                 Get Started
@@ -222,11 +222,11 @@ export default function NavBar() {
               Get Started
             </Link>
             <a
-              href="tel:+18005551234"
+              href="tel:+15163972280"
               className="flex items-center justify-center gap-2 text-white/60 hover:text-gold transition-colors text-sm py-2"
             >
               <RiPhoneLine className="w-4 h-4" />
-              (800) 555-1234
+              (516) 397-2280
             </a>
           </div>
         </div>
