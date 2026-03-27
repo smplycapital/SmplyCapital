@@ -77,11 +77,11 @@ export default function HeroSection() {
             className="flex flex-wrap gap-4 opacity-0 animate-fade-up"
             style={{ animationDelay: '500ms', animationFillMode: 'forwards' }}
           >
-            <Link href="/contact-us" className="btn-primary">
-              Start a Conversation
+            <Link href="/deal-analyzer" className="btn-primary">
+              Analyze Your Deal
             </Link>
-            <Link href="/loan-programs" className="btn-outline">
-              Explore Loan Programs
+            <Link href="/get-started" className="btn-outline">
+              Get Started
             </Link>
           </div>
         </div>
@@ -108,8 +108,8 @@ export default function HeroSection() {
                 <span className="text-white text-xs font-semibold">{item.value}</span>
               </div>
             ))}
-            <Link href="/contact-us" className="btn-primary w-full text-center text-xs mt-2">
-              Get a Quote
+            <Link href="/deal-analyzer" className="btn-primary w-full text-center text-xs mt-2">
+              Analyze Your Deal
             </Link>
           </div>
         </div>

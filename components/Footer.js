@@ -10,6 +10,11 @@ const footerLinks = {
     { label: 'Ground-Up Development', href: '/loan-programs#ground-up' },
     { label: 'Multifamily', href: '/loan-programs#multifamily' },
   ],
+  'Tools': [
+    { label: 'Deal Analyzer', href: '/deal-analyzer' },
+    { label: 'Get Started', href: '/get-started' },
+    { label: 'Pre-Qualification', href: '/#prequal' },
+  ],
   'Company': [
     { label: 'About Simply Capital', href: '/about' },
     { label: 'Our Team', href: '/about#team' },
@@ -31,15 +36,15 @@ export default function Footer() {
             <p className="font-display text-navy-900 font-bold text-xl">Ready to move on your deal?</p>
             <p className="text-navy-900/60 text-sm">We provide term sheets within 24 hours.</p>
           </div>
-          <Link href="/contact-us" className="bg-navy-900 text-white px-6 py-3 text-sm font-semibold uppercase tracking-wide hover:bg-navy-800 transition-colors duration-200 flex-shrink-0">
-            Start a Conversation →
+          <Link href="/get-started" className="bg-navy-900 text-white px-6 py-3 text-sm font-semibold uppercase tracking-wide hover:bg-navy-800 transition-colors duration-200 flex-shrink-0">
+            Get Started →
           </Link>
         </div>
       </div>
 
       {/* Main Footer */}
       <div className="container-custom py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-5">

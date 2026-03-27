@@ -8,6 +8,7 @@ import CTASection from '../components/CTASection';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';
 import Footer from '../components/Footer';
 import SubmitScenarioForm from '../components/SubmitScenarioForm';
+import PreQualWidget from '../components/PreQualWidget';
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
       <LoanProgramsGrid limit={6} />
       <CTASection />
       <TestimonialsCarousel />
+      <PreQualWidget />
 
       {/* Submit Scenario Section */}
       <section id="submit-scenario" className="py-24 bg-navy-900 relative overflow-hidden">

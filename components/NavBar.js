@@ -17,6 +17,7 @@ const navLinks = [
       { label: 'Multifamily', href: '/loan-programs#multifamily' },
     ],
   },
+  { label: 'Deal Analyzer', href: '/deal-analyzer' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact-us' },
 ];
@@ -133,8 +134,8 @@ export default function NavBar() {
                 <RiPhoneLine className="w-4 h-4" />
                 <span className="font-medium">(800) 555-1234</span>
               </a>
-              <Link href="/contact-us" className="hidden lg:inline-flex btn-primary text-xs py-2.5 px-5">
-                Start a Conversation
+              <Link href="/get-started" className="hidden lg:inline-flex btn-primary text-xs py-2.5 px-5">
+                Get Started
               </Link>
               <button
                 className="lg:hidden flex items-center justify-center w-10 h-10 text-white hover:text-gold transition-colors duration-200"
@@ -214,11 +215,11 @@ export default function NavBar() {
           {/* Drawer Footer */}
           <div className="p-6 border-t border-white/10 space-y-3">
             <Link
-              href="/contact-us"
+              href="/get-started"
               className="btn-primary w-full text-center text-xs"
               onClick={() => setMobileOpen(false)}
             >
-              Start a Conversation
+              Get Started
             </Link>
             <a
               href="tel:+18005551234"
