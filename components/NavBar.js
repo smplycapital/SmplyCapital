@@ -19,6 +19,7 @@ const navLinks = [
   },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact-us' },
+  { label: 'S2L', href: '/s2l' },
 ];
 
 export default function NavBar() {
