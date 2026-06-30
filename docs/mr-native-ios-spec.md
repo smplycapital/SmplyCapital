@@ -92,14 +92,142 @@ Currently the database is seeded with manually-entered sample businesses. For pr
 
 ## 6. Siri / App Intents
 
-iOS 16+ App Intents framework, not classic SiriKit domains (those are limited to predefined categories like ride-booking, messaging, etc. — this doesn't fit any of them, so App Intents is the right tool):
+iOS 16+ App Intents framework, not classic SiriKit domains (those are limited to predefined categories like ride-booking, messaging, etc. — this doesn't fit any of them, so App Intents is the right tool).
 
-- Define an `AppIntent` like `FindNearbyDealsIntent` that:
-  - Takes no required parameters (or an optional category)
-  - Calls the same `find_nearby_businesses` RPC using the device's current location
-  - Returns a result that Siri can speak ("There's a 20% off deal at Sorella Trattoria, 0.2 miles away") and that deep-links into the app's AR view focused on that business
-- Donate the intent (`IntentDonationManager` or automatic donation via `AppIntent` usage) so Siri Suggestions surface it proactively (e.g., when the user is near a partnered business with an active deal — this is a strong BD selling point: "tell Siri to check deals nearby").
-- Also worth scoping: a **Siri Shortcut** for "What's nearby?" as a widget/shortcut entry point, separate from requiring users to open the app first.
+### 6a. `BusinessEntity` — Make Businesses First-Class Siri Objects
+
+Everything below depends on this. Define `BusinessEntity` conforming to `AppEntity` so Siri understands individual businesses as named objects, not just search strings. Without this, Siri can only run generic intents; with it, a user can say "Sorella Trattoria" and Siri resolves it to a specific record.
+
+```swift
+struct BusinessEntity: AppEntity {
+    static var typeDisplayRepresentation = TypeDisplayRepresentation(name: "Business")
+    static var defaultQuery = BusinessEntityQuery()
+
+    let id: String          // google_place_id
+    var name: String
+    var category: String
+    var googleRating: Double?
+    var isOpen: Bool
+    var hasActiveDeal: Bool
+    var distanceMeters: Double?
+
+    var displayRepresentation: DisplayRepresentation {
+        DisplayRepresentation(title: "\(name)", subtitle: "\(category)")
+    }
+}
+```
+
+### 6b. `EntityQuery` + `EntityPropertyQuery`
+
+`EntityQuery` lets Siri resolve a spoken business name to a `BusinessEntity` by calling your Supabase backend. `EntityPropertyQuery` lets Siri filter by attributes from natural language — "Italian restaurants open now with a rating above 4 stars" — without you writing any NLP.
+
+```swift
+struct BusinessEntityQuery: EntityQuery, EntityPropertyQuery {
+    // EntityQuery: resolve by ID or name search
+    func entities(for ids: [String]) async throws -> [BusinessEntity] { ... }
+    func suggestedEntities() async throws -> [BusinessEntity] { /* top nearby */ }
+
+    // EntityPropertyQuery: filter by declared properties
+    static var properties = QueryProperties {
+        Property(\BusinessEntity.$category) {
+            EqualToComparator { NSPredicate(format: "category == %@", $0) }
+        }
+        Property(\BusinessEntity.$googleRating) {
+            GreaterThanOrEqualToComparator { NSPredicate(format: "google_rating >= %f", $0) }
+        }
+        Property(\BusinessEntity.$isOpen) {
+            EqualToComparator { NSPredicate(format: "is_open == %@", NSNumber(value: $0)) }
+        }
+        Property(\BusinessEntity.$hasActiveDeal) {
+            EqualToComparator { NSPredicate(format: "has_active_deal == %@", NSNumber(value: $0)) }
+        }
+    }
+    static var sortingOptions = SortingOptions {
+        SortingOption(\BusinessEntity.$googleRating)
+        SortingOption(\BusinessEntity.$distanceMeters)
+    }
+    func entities(matching comparators: [any EntityQueryComparator]...) async throws -> [BusinessEntity] {
+        // Build Supabase query from comparators and call find_nearby_businesses RPC
+    }
+}
+```
+
+### 6c. Intent Suite
+
+Define each intent as a separate `AppIntent` conforming struct. All return both a spoken string and a `SnippetsView` SwiftUI card so Siri shows a visual result alongside speech.
+
+| Intent | Example phrase | Parameters | Spoken result |
+|---|---|---|---|
+| `FindNearbyDealsIntent` | "Find deals nearby" | optional `category` | "There's a 20% off deal at Sorella Trattoria, 0.2 miles away" |
+| `SearchBusinessesIntent` | "Find coffee shops near me" | `category`, optional `query` | "I found 4 cafes nearby. The closest is Blue Bottle, 0.1 miles away" |
+| `GetBusinessDetailsIntent` | "Tell me about [business]" | `business: BusinessEntity` | Name, category, rating, open status, distance |
+| `GetBusinessRatingIntent` | "What's the rating for [business]?" | `business: BusinessEntity` | "Sorella Trattoria is rated 4.6 stars based on 312 reviews" |
+| `CheckBusinessStatusIntent` | "Is [business] open right now?" | `business: BusinessEntity` | "Yes, Sorella Trattoria is open until 10 PM" / "No, it opens at 5 PM today" |
+| `GetActiveDealsIntent` | "Does [business] have any deals?" | `business: BusinessEntity` | "Yes — 20% off any entrée, valid until Sunday" |
+| `SaveBusinessIntent` | "Save [business] in MR" | `business: BusinessEntity` | "Saved Sorella Trattoria" + writes to `mr_user_favorites` |
+
+Each intent that takes a `BusinessEntity` parameter gets Siri's full entity resolution pipeline — the user can speak any partial name and Siri disambiguates using `suggestedEntities()`.
+
+### 6d. `AppShortcutsProvider` (iOS 16.4+)
+
+Without this, Siri shortcuts require the user to manually configure them in Settings — almost nobody does. `AppShortcutsProvider` makes your defined phrases available in Siri automatically the moment the app is installed, with zero user setup.
+
+```swift
+struct MRShortcuts: AppShortcutsProvider {
+    static var appShortcuts: [AppShortcut] {
+        AppShortcut(intent: FindNearbyDealsIntent(), phrases: [
+            "Find deals nearby in \(.applicationName)",
+            "What deals are near me in \(.applicationName)",
+            "Show me offers nearby in \(.applicationName)",
+        ])
+        AppShortcut(intent: SearchBusinessesIntent(), phrases: [
+            "Search for \(\.$category) in \(.applicationName)",
+            "Find \(\.$category) near me in \(.applicationName)",
+        ])
+        AppShortcut(intent: GetBusinessRatingIntent(), phrases: [
+            "What's the rating for \(\.$business) in \(.applicationName)",
+            "How good is \(\.$business) in \(.applicationName)",
+        ])
+        AppShortcut(intent: CheckBusinessStatusIntent(), phrases: [
+            "Is \(\.$business) open in \(.applicationName)",
+            "Is \(\.$business) open right now in \(.applicationName)",
+        ])
+        AppShortcut(intent: GetActiveDealsIntent(), phrases: [
+            "Does \(\.$business) have any deals in \(.applicationName)",
+            "What deals does \(\.$business) have in \(.applicationName)",
+        ])
+    }
+}
+```
+
+### 6e. Spoken Result Formatting + Siri Snippet Cards
+
+Return `IntentResult.value(result, view:)` with a SwiftUI `SnippetsView` so Siri shows a visual card alongside the spoken response. For deal results the card should use the gold deal badge; for rating results show the star rating and review count prominently. For `CheckBusinessStatusIntent` show open/closed chip with closing time. Keep snippet views under 100pt tall — Siri clips taller views.
+
+### 6f. Proactive Donation
+
+Donate intents after real user actions so Siri Suggestions surface proactively:
+
+```swift
+// After user taps a business in AR view:
+let intent = GetBusinessDetailsIntent()
+intent.business = tappedBusinessEntity
+let interaction = INInteraction(intent: intent.makeINIntent(), response: nil)
+interaction.donate()
+
+// After user claims a deal:
+AddToSiriButton(intent: GetActiveDealsIntent()) // lets user add it to Siri from the deal card
+```
+
+Also donate `GetBusinessRatingIntent` after a user checks ratings — Siri will surface "Check rating for Sorella Trattoria" proactively the next time they're nearby.
+
+### 6g. BD Pitch Points From Siri Integration
+
+- "Ask Siri 'Is Blue Bottle open right now?' and it pulls live hours from your listing"
+- "Ask Siri 'Does Sorella have any deals?' and it reads out your active promo"
+- "Your business appears in Siri Suggestions when customers are nearby"
+
+These are concrete, demo-able selling points for the partnership pitch.
 
 ---
 
@@ -344,6 +472,8 @@ Available wherever Apple has collected imagery (broad coverage in cities). Falls
 | Region Monitoring | High — passive discovery without app open | Low | v1 |
 | Live Activities | High — deal stays top-of-mind post-claim | Low | v1 |
 | WidgetKit | High — lock screen real estate | Low | v1 |
+| `BusinessEntity` + `EntityQuery` | High — unlocks all Siri search & review intents | Medium | v1 |
+| `AppShortcutsProvider` + intent suite | High — zero-setup Siri phrases, demo-able BD feature | Low (once entity done) | v1 |
 | Core NFC | Medium — complements App Clips | Low | v1 |
 | MapKit Look Around | Medium — replaces placeholder map | Low | v1 |
 | TipKit | Medium — solves AR onboarding | Low | v1 |
