@@ -88,6 +88,43 @@ Currently the database is seeded with manually-entered sample businesses. For pr
 4. Recommended: run the sync as a scheduled job (Supabase Edge Function or a Cloudflare Worker on a cron trigger) rather than from the iOS client, to avoid burning Places API quota per-device and to keep data consistent across users.
 5. Respect Google's attribution requirements (showing "Powered by Google" / rating data attribution per their ToS).
 
+### 5a. UI/UX Constraints From Using Google Data
+
+Using Google Places data is **not difficult from a UI/UX perspective**, but there are four non-negotiable constraints that affect layout:
+
+**Attribution is mandatory and affects component design**
+
+Google's ToS requires the Google logo displayed adjacent to any star rating or review count, and "Powered by Google" somewhere visible on any screen showing Google-sourced content. This isn't a footer footnote — it must be near the data itself. Reserve space for it in:
+- The AR marker card (small "G" logo next to the rating)
+- The list row (inline with the mini-rating chip)
+- The business detail sheet (below the rating pill)
+
+If using the Google Places iOS SDK, `GMSPlacePhotoMetadata.attributions` returns a pre-formatted `NSAttributedString` you render directly. If using REST (recommended — see below), you build the attribution UI manually but it's just a small logo image + text.
+
+**Use `openNow` from the API — do not recompute it**
+
+The web mockup's `isOpenNow()` is explicitly simplified and will be wrong for DST transitions, special holiday hours, and businesses with split shifts. The Google Places API (New) returns `regularOpeningHours.openNow` as a boolean in the response payload — request it in your field mask and display it directly. Store `is_open_now` as a column in `mr_businesses` that gets refreshed on each sync cycle, not computed client-side.
+
+**Photos require a server-side proxy**
+
+Photo references from the Places API cannot be embedded as direct image URLs in the app — calling the photo endpoint requires an API key that cannot be exposed in the app binary. Route all photo requests through a Supabase Edge Function or Cloudflare Worker that holds the key server-side and streams the image back. This is backend work, not UI work, but it affects how you build the image components: async load from your proxy URL (`/api/places/photo?ref=...`), not from Google directly. Cache aggressively — photo references are stable.
+
+**Graceful empty states for incomplete data**
+
+A meaningful portion of businesses in Google Places have missing fields — no hours, no phone, no website, no photos. Every UI component that renders Google data needs a graceful empty state:
+- No rating → hide the rating pill entirely, don't show "★ —"
+- No hours → hide the hours table, don't show empty rows
+- No phone → hide the call button
+- No photo → use the category icon banner (already in the mockup design)
+
+**SDK vs REST recommendation**
+
+Use REST via your Supabase sync job (§5, points 1–4), not the Google Places iOS SDK bundled in the app. Reasons:
+- The SDK adds ~15MB to the binary and requires an API key in the app bundle (security risk)
+- Since you're already syncing to Supabase, the iOS app fetches data through your own backend — the SDK adds nothing
+- REST field masks (`X-Goog-FieldMask: places.displayName,places.rating,places.regularOpeningHours.openNow,...`) let you fetch exactly what you need in one call, no over-fetching
+- The only exception: if you need real-time Place Details for a business not yet in your DB (e.g., a user taps an AR card for a business that hasn't synced yet) — in that case a lightweight REST call through your proxy is cleaner than bundling the SDK
+
 ---
 
 ## 6. Siri / App Intents
